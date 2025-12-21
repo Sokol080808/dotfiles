@@ -18,3 +18,4 @@ config_symlink() {
 
 mkdir -p ~/.config
 config_symlink "nvim"
+config_symlink "alacritty"
