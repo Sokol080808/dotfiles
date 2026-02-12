@@ -2,6 +2,12 @@
 return {
     name = "texlab",
     cmd = { "texlab" },
-    root_markers = { ".git", "*.tex" },
-    filetypes = { "tex", "bib" },
+    root_markers = {
+        ".git",
+        "*.tex"
+    },
+    filetypes = {
+        "tex",
+        "bib"
+    },
 }

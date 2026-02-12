@@ -65,6 +65,7 @@ vim.lsp.config("*", {
 
 -- Enable each language server by filename under the lsp/ folder
 vim.lsp.enable({
+    "clangd",
     "pyright",
     "ruff",
     "lua_ls",
