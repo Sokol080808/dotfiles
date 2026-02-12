@@ -64,7 +64,12 @@ vim.lsp.config("*", {
 })
 
 -- Enable each language server by filename under the lsp/ folder
-vim.lsp.enable({ "pyright", "ruff", "lua_ls" })
+vim.lsp.enable({
+    "pyright",
+    "ruff",
+    "lua_ls",
+    "texlab",
+})
 
 -- disable default lsp binding cause why not
 vim.keymap.del('n', 'gra')

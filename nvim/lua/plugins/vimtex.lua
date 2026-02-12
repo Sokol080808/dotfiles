@@ -8,6 +8,8 @@ return {
 
         vim.g.vimtex_indent_enabled = 0
 
+        vim.g.vimtex_complete_enabled = 0
+
         vim.g.vimtex_env_toggle_math_map = {
             ['$'] = '\\(',
             ['$$'] = '\\[',
