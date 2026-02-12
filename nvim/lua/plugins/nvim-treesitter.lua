@@ -14,6 +14,15 @@ return {
             },
             sync_install = false,
             auto_install = true,
+
+            highlight = {
+                enable = true,
+                disable = function(lang, buf)
+                    local allowed = { "markdown", "markdown_inline", "python" }
+                    return not vim.tbl_contains(allowed, lang)
+                end,
+            },
+
         })
     end,
 }
