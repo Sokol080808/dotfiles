@@ -11,6 +11,10 @@ return {
         window = { position = "right" },
     },
     keys = {
-        { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle NeoTree" },
+        {
+            "<leader>e",
+            "<cmd>Neotree toggle<cr>",
+            desc = "Toggle NeoTree",
+        },
     },
 }

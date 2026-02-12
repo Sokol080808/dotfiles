@@ -1,5 +1,6 @@
 return {
     "nvim-neotest/neotest",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "nvim-neotest/nvim-nio",
         "nvim-lua/plenary.nvim",
@@ -38,5 +39,16 @@ return {
             }
         })
     end,
-    -- keys = {},
+    keys = {
+        {
+            "<leader>ts",
+            "<cmd>Neotest summary toggle<cr>",
+            desc = "Toggle neotest summary window",
+        },
+        {
+            "<leader>to",
+            "<cmd>Neotest output-panel toggle<cr>",
+            desc = "Toggle neotest output window",
+        },
+    },
 }
