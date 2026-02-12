@@ -3,6 +3,8 @@ vim.g.maplocalleader = ","
 
 vim.opt.termguicolors = true
 
+vim.opt.wrap = false
+
 vim.opt.showmode = false
 
 vim.opt.shiftwidth = 4

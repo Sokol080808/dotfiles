@@ -8,6 +8,10 @@ return {
         { "<C-n>", "<cmd>bn<cr>", "Next buffer" },
     },
     config = function()
-        require("bufferline").setup {}
+        require("bufferline").setup({
+            options = {
+                diagnostics = "nvim_lsp",
+            },
+        })
     end,
 }
