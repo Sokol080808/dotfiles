@@ -1,19 +1,29 @@
 return {
-    'github/copilot.vim',
-    event = {
-        "BufReadPre",
-        "BufNewFile",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    requires = {
+        "copilotlsp-nvim/copilot-lsp",
     },
-    config = function()
-        vim.g.copilot_enabled = false
-        vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
-            expr = true,
-            replace_keycodes = false
-        })
-        vim.g.copilot_no_tab_map = true
-    end,
+    opts = {
+        suggestion = {
+            enabled = true,
+            auto_trigger = true,
+            keymap = {
+                accept = "<C-j>",
+                next = "<M-]>",
+                prev = "<M-[>",
+                dismiss = "<C-]>",
+            },
+            inline = {
+                enabled = true,
+                highlight = "Comment",
+            },
+        },
+        panel = { enabled = false },
+    },
     keys = {
-        { "<leader>ce", "<cmd>Copilot enable<cr>",  desc = "Enable Copilot" },
-        { "<leader>cd", "<cmd>Copilot disable<cr>", desc = "Disable Copilot" },
+        { "<leader>ce", "<cmd>Copilot enable<cr>",                         desc = "Enable Copilot" },
+        { "<leader>ct", "<cmd>Copilot suggestion toggle_auto_trigger<cr>", desc = "Toggle suggestions" },
+        { "<leader>cd", "<cmd>Copilot disable<cr>",                        desc = "Disable Copilot" },
     },
 }
