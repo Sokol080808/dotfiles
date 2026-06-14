@@ -1,0 +1,9 @@
+# Font
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+
+# Theme
+theme = TokyoNight Storm
+
+# Start maximized
+maximize = true
