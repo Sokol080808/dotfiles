@@ -27,6 +27,12 @@ vim.opt.listchars = {
 }
 
 vim.opt.signcolumn = "yes"
+
+vim.opt.foldcolumn = "0"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+
 vim.diagnostic.config({
     virtual_text = { current_line = true },
     severity_sort = true,
