@@ -4,20 +4,18 @@ return {
     lazy = false,
     ---@type snacks.Config
     opts = {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-        -- bigfile = { enabled = true },
-        dashboard = { enabled = true },
-        -- explorer = { enabled = true },
-        -- indent = { enabled = true },
-        -- input = { enabled = true },
-        -- picker = { enabled = true },
-        -- notifier = { enabled = true },
-        -- quickfile = { enabled = true },
-        -- scope = { enabled = true },
-        -- scroll = { enabled = true },
-        -- statuscolumn = { enabled = true },
-        -- words = { enabled = true },
+        dashboard    = { enabled = true },
+        bigfile      = { enabled = true }, -- не лагать на огромных файлах
+        quickfile    = { enabled = true }, -- быстрый старт при `nvim file`
+        indent       = { enabled = true }, -- направляющие отступов
+        scope        = { enabled = true },
+        notifier     = { enabled = true }, -- уведомления
+        words        = { enabled = true }, -- подсветка вхождений символа под курсором
+        statuscolumn = { enabled = true },
+        zen          = { enabled = true }, -- замена zen-mode.nvim
+    },
+    keys = {
+        { "<leader>z", function() Snacks.zen() end,      desc = "Toggle Zen Mode" },
+        { "<leader>Z", function() Snacks.zen.zoom() end, desc = "Toggle Zoom" },
     },
 }
