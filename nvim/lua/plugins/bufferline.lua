@@ -4,8 +4,8 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     lazy = false,
     keys = {
-        { "<C-p>", "<cmd>bp<cr>", "Previous buffer" },
-        { "<C-n>", "<cmd>bn<cr>", "Next buffer" },
+        { "<C-p>", "<cmd>bp<cr>", desc = "Previous buffer" },
+        { "<C-n>", "<cmd>bn<cr>", desc = "Next buffer" },
     },
     config = function()
         require("bufferline").setup({

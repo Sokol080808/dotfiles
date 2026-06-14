@@ -6,15 +6,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(event)
         local opts = { buffer = event.buf }
 
-        vim.keymap.set("n", "<leader>gd", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-        vim.keymap.set("n", "<leader>gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
-        -- vim.keymap.set("n", "<leader>go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-        vim.keymap.set("n", "<leader>gre", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-        vim.keymap.set("n", "<leader>gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-        vim.keymap.set("n", "<leader>grn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+        local tb = require("telescope.builtin")
+        vim.keymap.set("n", "<leader>gd", tb.lsp_definitions, opts)
+        vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts)
+        vim.keymap.set("n", "<leader>gi", tb.lsp_implementations, opts)
+        -- vim.keymap.set("n", "<leader>go", vim.lsp.buf.type_definition, opts)
+        vim.keymap.set("n", "<leader>gre", tb.lsp_references, opts)
+        vim.keymap.set("n", "<leader>gs", vim.lsp.buf.signature_help, opts)
+        vim.keymap.set("n", "<leader>grn", vim.lsp.buf.rename, opts)
 
-        vim.keymap.set({ "n", "x" }, "<leader>gf", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-        vim.keymap.set("n", "<leader>gc", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+        vim.keymap.set({ "n", "x" }, "<leader>gf", function() vim.lsp.buf.format({ async = true }) end, opts)
+        vim.keymap.set("n", "<leader>gc", vim.lsp.buf.code_action, opts)
 
         -- vim virtual text diagnostics toggle
         -- vim.keymap.set("n", "<leader>tdd", function()
@@ -73,8 +75,6 @@ vim.lsp.enable({
 })
 
 -- disable default lsp binding cause why not
-vim.keymap.del('n', 'gra')
-vim.keymap.del('n', 'gri')
-vim.keymap.del('n', 'grn')
-vim.keymap.del('n', 'grt')
-vim.keymap.del('n', 'grr')
+for _, k in ipairs({ 'gra', 'gri', 'grn', 'grt', 'grr' }) do
+    pcall(vim.keymap.del, 'n', k)
+end
