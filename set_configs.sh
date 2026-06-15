@@ -22,3 +22,4 @@ mkdir -p ~/.config
 config_symlink "nvim"
 config_symlink "alacritty"
 config_symlink "ghostty"
+config_symlink "cmux"
