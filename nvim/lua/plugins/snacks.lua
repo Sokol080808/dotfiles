@@ -11,7 +11,7 @@ return {
         scope        = { enabled = true },
         notifier     = { enabled = true }, -- уведомления
         words        = { enabled = true }, -- подсветка вхождений символа под курсором
-        statuscolumn = { enabled = true },
+        statuscolumn = { enabled = true, left = { "sign" } }, -- без меток в гаттере (оставляем sign)
         zen          = { enabled = true }, -- замена zen-mode.nvim
     },
     keys = {
