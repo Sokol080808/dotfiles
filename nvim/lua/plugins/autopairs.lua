@@ -4,5 +4,6 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {
         check_ts = true, -- учитывать treesitter (не закрывать скобку внутри строки и т.п.)
+        disable_filetype = { "TelescopePrompt", "spectre_panel", "tex", "plaintex", "latex", "context" },
     },
 }
