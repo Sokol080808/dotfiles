@@ -13,7 +13,7 @@ return {
         words        = { enabled = true }, -- подсветка вхождений символа под курсором
         statuscolumn = { enabled = true, left = { "sign" } }, -- без меток в гаттере (оставляем sign)
         zen          = { enabled = true }, -- замена zen-mode.nvim
-        image        = { enabled = true }, -- картинки/формулы в markdown и пр.
+        image        = { enabled = false }, -- картинки/формулы в markdown и пр.
     },
     keys = {
         { "<leader>z", function() Snacks.zen() end,      desc = "Toggle Zen Mode" },
