@@ -1,2 +1,9 @@
 nvim/lazy-lock.json
 cmux/*.bak*
+
+# graphify knowledge graph (generated)
+graphify-out/
+
+# Claude Code local settings
+.claude/
+CLAUDE.md
