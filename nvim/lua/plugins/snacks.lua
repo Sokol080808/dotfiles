@@ -6,7 +6,7 @@ return {
     opts = {
         dashboard    = { enabled = true },
         bigfile      = { enabled = true }, -- не лагать на огромных файлах
-        quickfile    = { enabled = true }, -- быстрый старт при `nvim file`
+        quickfile    = { enabled = false },
         indent       = { enabled = true }, -- направляющие отступов
         scope        = { enabled = true },
         notifier     = { enabled = true }, -- уведомления

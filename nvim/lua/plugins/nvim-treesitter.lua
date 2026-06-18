@@ -1,28 +1,25 @@
 return {
     'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    branch = 'master', -- frozen branch
+    branch = 'main',
     lazy = false,
+    build = ':TSUpdate',
     config = function()
-        require("nvim-treesitter.configs").setup({
-            ensure_installed = {
-                "markdown",
-                "markdown_inline",
-                "lua",
-                "python",
-                "cpp",
-            },
-            sync_install = false,
-            auto_install = true,
+        require('nvim-treesitter').install({
+            'markdown',
+            'markdown_inline',
+            'lua',
+            'python',
+            'cpp',
+        })
 
-            highlight = {
-                enable = true,
-                disable = function(lang, buf)
-                    local allowed = { "markdown", "markdown_inline", "python" }
-                    return not vim.tbl_contains(allowed, lang)
-                end,
-            },
-
+        vim.api.nvim_create_autocmd('FileType', {
+            callback = function(ev)
+                if ev.match == 'markdown' or ev.match == 'python' then
+                    pcall(vim.treesitter.start, ev.buf)
+                else
+                    pcall(vim.treesitter.get_parser, ev.buf)
+                end
+            end,
         })
     end,
 }
