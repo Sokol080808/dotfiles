@@ -10,6 +10,7 @@ return {
             'lua',
             'python',
             'cpp',
+            'latex',
         })
 
         vim.api.nvim_create_autocmd('FileType', {
