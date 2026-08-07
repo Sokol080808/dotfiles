@@ -1,0 +1,10 @@
+{
+  "TODO comment": {
+    "prefix": "todo",
+    "body": ["TODO: $0"]
+  },
+  "Date": {
+    "prefix": "date",
+    "body": ["$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"]
+  }
+}
