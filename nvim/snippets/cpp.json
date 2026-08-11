@@ -1,24 +1,34 @@
 {
   "Competitive programming template": {
-    "prefix": "cp",
+    "prefix": "_cp",
     "body": [
-      "#include <bits/stdc++.h>",
-      "using namespace std;",
+      "#include <ios>",
+      "#include <iostream>",
+      "",
+      "void solve() {",
+      "    $0",
+      "}",
       "",
       "int main() {",
-      "    ios::sync_with_stdio(false);",
-      "    cin.tie(nullptr);",
+      "    std::ios::sync_with_stdio(false);",
+      "    std::cin.tie(nullptr);",
       "",
-      "    $0",
+      "    int tests = 1;",
+      "    std::cin >> tests;",
+      "    while (tests--) solve();",
       "}"
     ]
   },
-  "For loop": {
-    "prefix": "fori",
+  "pb_ds ordered set": {
+    "prefix": "_pbds",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < ${2:n}; ++${1:i}) {",
-      "    $0",
-      "}"
+      "#include <ext/pb_ds/assoc_container.hpp>",
+      "#include <ext/pb_ds/tree_policy.hpp>",
+      "using namespace __gnu_pbds;",
+      "",
+      "template <typename T>",
+      "using ordered_set = tree<T, null_type, std::less<T>, rb_tree_tag, tree_order_statistics_node_update>;",
+      "$0"
     ]
   }
 }
