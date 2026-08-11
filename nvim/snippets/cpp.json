@@ -1,34 +1,34 @@
 {
-  "Competitive programming template": {
-    "prefix": "_cp",
-    "body": [
-      "#include <ios>",
-      "#include <iostream>",
-      "",
-      "void solve() {",
-      "    $0",
-      "}",
-      "",
-      "int main() {",
-      "    std::ios::sync_with_stdio(false);",
-      "    std::cin.tie(nullptr);",
-      "",
-      "    int tests = 1;",
-      "    std::cin >> tests;",
-      "    while (tests--) solve();",
-      "}"
-    ]
-  },
-  "pb_ds ordered set": {
-    "prefix": "_pbds",
-    "body": [
-      "#include <ext/pb_ds/assoc_container.hpp>",
-      "#include <ext/pb_ds/tree_policy.hpp>",
-      "using namespace __gnu_pbds;",
-      "",
-      "template <typename T>",
-      "using ordered_set = tree<T, null_type, std::less<T>, rb_tree_tag, tree_order_statistics_node_update>;",
-      "$0"
-    ]
-  }
+    "Competitive programming template": {
+        "prefix": "_cp",
+        "body": [
+            "#include <ios>",
+            "#include <iostream>",
+            "",
+            "void solve() {",
+            "    $0",
+            "}",
+            "",
+            "int main() {",
+            "    std::ios::sync_with_stdio(false);",
+            "    std::cin.tie(nullptr);",
+            "",
+            "    int tests = 1;",
+            "    std::cin >> tests;",
+            "    while (tests--) solve();",
+            "}"
+        ]
+    },
+    "pb_ds ordered set": {
+        "prefix": "_pbds",
+        "body": [
+            "#include <ext/pb_ds/assoc_container.hpp>",
+            "#include <ext/pb_ds/tree_policy.hpp>",
+            "using namespace __gnu_pbds;",
+            "",
+            "template <typename T>",
+            "using ordered_set = tree<T, null_type, std::less<T>, rb_tree_tag, tree_order_statistics_node_update>;",
+            "$0"
+        ]
+    }
 }
