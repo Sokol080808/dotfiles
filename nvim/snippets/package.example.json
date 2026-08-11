@@ -1,9 +1,9 @@
 {
-  "name": "personal-snippets",
-  "contributes": {
-    "snippets": [
-      { "language": "all", "path": "./all.json" },
-      { "language": "cpp", "path": "./cpp.json" }
-    ]
-  }
+    "name": "personal-snippets",
+    "contributes": {
+        "snippets": [
+            { "language": "all", "path": "./all.json" },
+            { "language": "cpp", "path": "./cpp.json" }
+        ]
+    }
 }
