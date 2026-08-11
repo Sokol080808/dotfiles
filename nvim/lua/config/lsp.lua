@@ -72,6 +72,7 @@ vim.lsp.enable({
     "ruff",
     "lua_ls",
     "texlab",
+    "jsonls",
 })
 
 -- disable default lsp binding cause why not
