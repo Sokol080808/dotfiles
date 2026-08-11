@@ -1,7 +1,5 @@
 .DS_Store
 nvim/lazy-lock.json
-nvim/snippets/*.json
-!nvim/snippets/*.example.json
 cmux/*.bak*
 
 # graphify knowledge graph (generated)
